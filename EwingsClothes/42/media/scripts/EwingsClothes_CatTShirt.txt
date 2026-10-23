@@ -1,0 +1,19 @@
+module EwingsClothes
+{
+    item CatTShirt
+    {
+        DisplayName = Cat T-shirt,
+        DisplayCategory = Clothing,
+        ItemType = base:clothing,
+        Icon = EwingsClothes_CatTShirt,
+        BloodLocation = Shirt,
+        BodyLocation = base:tshirt,
+        ClothingItem = EwingsClothes_CatTShirt,
+        FabricType = Cotton,
+        Insulation = 0.2,
+        WindResistance = 0.05,
+        Weight = 0.3,
+        WorldStaticModel = TShirt_Ground,
+        Tags = base:ripclothingcotton,
+    }
+}

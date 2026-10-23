@@ -1,6 +1,6 @@
 name=Ewing's Clothes
 id=EwingsClothes
-modversion=1.0.0
+modversion=1.1.0
 versionMin=42.21
 versionMax=42.21
-description=Original Ewing's clothing. One Job: a purple cotton T-shirt with yellow front-chest lettering. Build 42.21 target; runtime testing pending.
+description=Three fixed-design shirts: One Job, Dog and Cat. Reusable matching-photo animal recipes and rare additive clothing loot. Target game 42.21; in-game tests pending.

@@ -1,0 +1,19 @@
+module EwingsClothes
+{
+    item DogTShirt
+    {
+        DisplayName = Dog T-shirt,
+        DisplayCategory = Clothing,
+        ItemType = base:clothing,
+        Icon = EwingsClothes_DogTShirt,
+        BloodLocation = Shirt,
+        BodyLocation = base:tshirt,
+        ClothingItem = EwingsClothes_DogTShirt,
+        FabricType = Cotton,
+        Insulation = 0.2,
+        WindResistance = 0.05,
+        Weight = 0.3,
+        WorldStaticModel = TShirt_Ground,
+        Tags = base:ripclothingcotton,
+    }
+}

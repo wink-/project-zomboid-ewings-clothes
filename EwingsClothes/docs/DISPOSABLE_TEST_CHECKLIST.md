@@ -1,21 +1,17 @@
-# Disposable-world acceptance checklist — not yet run
+# 1.1.0 disposable tests — not run in game
 
-Only perform these steps after authorizing installation and game/server operation. Use a fresh disposable world and only Ewing's Clothes first. Do not use a valuable save as the test target.
+Only perform after authorizing installation/game operation; never use a valuable live save to discover compatibility.
 
-- [ ] Confirm game reports 42.21 and package hash matches the provided sidecar.
-- [ ] Install/enable only `EwingsClothes`; confirm mod name/version and no loading/XML/translation/texture warnings.
-- [ ] Search `EwingsClothes.OneJobTShirt` in debug item browser; add multiple copies. Confirm name, original purple/yellow icon and fixed color across instances.
-- [ ] Wear via normal inventory action. Confirm T-shirt slot, pullover action and successful unequip/re-equip.
-- [ ] Test male and female bodies: front reads exact **One Job** left-to-right at chest; back stays plain. Inspect neckline, shoulder, sleeve and waist seams at all rotations.
-- [ ] Check idle, walking, running, crouching, aiming, combat and seated poses for seam gaps/stretching. Text should stay within the front panel.
-- [ ] Wear/remove shirts and jackets over it; verify native layering and reappearance of the design.
-- [ ] Test blood, dirt, holes, repair patches, washing and wet/dry behavior. Damage may obscure the print; washing should not recolor the baked design.
-- [ ] Check cotton ripping and inherited statistics, 0.3 weight, 0.2 insulation and 0.05 wind resistance.
-- [ ] Drop, rotate and pick up the shirt. Confirm native ground mesh loads and its texture is acceptable.
-- [ ] Save/reload and restart the disposable world. Verify worn, inventory, container and dropped items retain the full ID and visual.
-- [ ] Confirm no added recipes or natural loot distribution; debug spawning is the intended availability in 1.0.0.
-- [ ] Repeat with intended other mods only after isolated checks pass.
-- [ ] Dedicated/local MP disposable world: identical package on server and two clients; both genders observed by another client; equip/transfer/drop, rejoin, server restart and persistence.
-- [ ] Review logs from these tests without uploading private saves or unrelated logs.
+- [ ] Install only this version, confirm modID/version and all three debug item IDs.
+- [ ] Check new Dog/Cat front art, plain backs, sleeves/necklines, animations and clothing layers on both sexes. Confirm One Job is unchanged.
+- [ ] Gather both plain-shirt variants, native brushes, partially used paint cans and eligible photos. Confirm quantities/retained tools match the recipe document.
+- [ ] With only a wrong-animal, scenic, missing-key or unrelated photo, ensure the corresponding recipe cannot craft. Test wrong photo first in inventory plus a matching photo later; the qualifying reference must be selected.
+- [ ] Test every listed dog/cat variant and combined dog-and-cat photo. Confirm photo ID/modData/condition and brush persist over repeated crafts.
+- [ ] Test unworn versus worn shirts. Damaged, dirty, bloody, patched and wet eligible inputs must preserve state; output must keep the new fixed art instead of random tint/decal.
+- [ ] Check one native use per paint, depletion behavior and normal empty-bucket replacement; missing or insufficient paint must prevent crafting. Check no accidental whole-can destruction.
+- [ ] Test single crafting, cancellation, changing selected inventory inputs and output naming. No One Job or already-animal shirt is a blank input.
+- [ ] Inspect new/generated shirt-store/storage/wardrobe containers under normal loot settings. Existing generated containers must not be forced to respawn/refill. Other loot remains present.
+- [ ] Test save/reload, item transfer/drop/pickup, and rollback after removing new item instances.
+- [ ] With identical packages on server/two clients, test remote crafting eligibility, retained photos, state transfer, rendering, server loot generation and rejoin/restart persistence.
 
-Record the exact build, package SHA, pass/fail and any screenshots separately. Offline previews and checks do not mark these boxes passed.
+Record build/hash and outcomes separately. Offline native-parser/VM/mocked checks do not tick these gameplay boxes.

@@ -1,0 +1,20 @@
+{
+  "results": {
+    "photo_predicates": {
+      "status": "PASS",
+      "vm": "installed native Kahlua",
+      "results": "[true, photo predicate assertions passed, 59.0]"
+    },
+    "additive_loot_repeated_load": {
+      "status": "PASS",
+      "vm": "installed native Kahlua",
+      "results": "[true, distribution assertions passed after repeated loads, 589.0]"
+    },
+    "native_copy_clothing_state": {
+      "status": "PASS",
+      "vm": "installed native Kahlua",
+      "results": "[true, native CopyClothing routine preserved damaged, dirty, bloody, wet, patched input state (isolated mocks)]"
+    }
+  },
+  "not_gameplay": "Native functions/VM executed with isolated test tables, not actual inventory, rendering or multiplayer"
+}

@@ -3,3 +3,4 @@
 *.zip binary
 *.json -text
 art/** -text
+EwingsClothes/** -text

@@ -1,0 +1,49 @@
+module EwingsClothes
+{
+    craftRecipe EwingsClothesPrintDogTShirt
+    {
+        timedAction = MixingBucket,
+        time = 180,
+        Tags = AnySurfaceCraft,
+        category = Tailoring,
+        AllowBatchCraft = false,
+        OnTest = EwingsClothesRecipeChecks.dogPhoto,
+        inputs
+        {
+            item 1 [Base.Tshirt_DefaultTEXTURE;Base.Tshirt_WhiteTINT] flags[IsNotWorn;CopyClothing],
+            item 1 [Base.Photo] mode:keep,
+            item 1 [Base.Paintbrush;Base.PaintbrushCrafted] mode:keep,
+            item 1 [Base.PaintTurquoise],
+            item 1 [Base.PaintBrown],
+            item 1 [Base.PaintWhite],
+            item 1 [Base.PaintBlack],
+        }
+        outputs
+        {
+            item 1 EwingsClothes.DogTShirt,
+        }
+    }
+    craftRecipe EwingsClothesPrintCatTShirt
+    {
+        timedAction = MixingBucket,
+        time = 180,
+        Tags = AnySurfaceCraft,
+        category = Tailoring,
+        AllowBatchCraft = false,
+        OnTest = EwingsClothesRecipeChecks.catPhoto,
+        inputs
+        {
+            item 1 [Base.Tshirt_DefaultTEXTURE;Base.Tshirt_WhiteTINT] flags[IsNotWorn;CopyClothing],
+            item 1 [Base.Photo] mode:keep,
+            item 1 [Base.Paintbrush;Base.PaintbrushCrafted] mode:keep,
+            item 1 [Base.PaintBlue],
+            item 1 [Base.PaintOrange],
+            item 1 [Base.PaintWhite],
+            item 1 [Base.PaintBlack],
+        }
+        outputs
+        {
+            item 1 EwingsClothes.CatTShirt,
+        }
+    }
+}

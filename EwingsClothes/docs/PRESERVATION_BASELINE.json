@@ -1,0 +1,19 @@
+{
+  "source_commit": "11a4ded8904d4365a70a0657446ad0daf913a850",
+  "version": "1.0.0",
+  "sha256": {
+    "art/art-spec.json": "f8899254e9194fbf6038ee337c649e498ee0aa30f076d71d9bc1e116729f9ca9",
+    "art/OneJobTShirt-atlas-source.png": "1c0ea1df13d7f253b5cb361d309d045cff62769adef730e40cc838062e696bdc",
+    "art/OneJobTShirt-atlas-source.svg": "19a61cbcefbb4ed722c1d3d242370c74322ed8a586d87941980c87d600b6ac53",
+    "art/OneJobTShirt-icon-source.png": "ade03244f04de9a57bacd81f47c524b03623b308c70e93559e87ceb22f9512ea",
+    "preview/EwingsClothes-1.0.0-front-back-preview.png": "420bb0b4d1a8b72d09a7929af44140743453cfb12a130795fc320f858707550e",
+    "preview/female-back.png": "3130424479033a052c97bae662cda829ae97bfd80d8a5298377ecf992eea268e",
+    "preview/female-front.png": "012641cee93b48c53a416af6fe175ad37e254c71cfcda45ca57d7e1118a67795",
+    "preview/male-back.png": "ae8b80b31b38a9e50fccd75ad6272de840341878dc58084ee6fcbd1a7bbfc813",
+    "preview/male-front.png": "6652926a2a2e2b05dde847c351ca17ed8c42593c437d1a0751dcf41c01effc94",
+    "EwingsClothes/42/media/scripts/EwingsClothes_OneJobTShirt.txt": "5c009f82883e1526eec81f459300a022812df990ffa28e8d6c76140b2ee3b111",
+    "EwingsClothes/common/media/clothing/clothingItems/EwingsClothes_OneJobTShirt.xml": "e56754cfe5601e3499ca445a578c66267ac60fcec55c4a45b7c6c9254496b772",
+    "EwingsClothes/common/media/textures/Clothes/EwingsClothes/EwingsClothes_OneJobTShirt.png": "1c0ea1df13d7f253b5cb361d309d045cff62769adef730e40cc838062e696bdc",
+    "EwingsClothes/common/media/textures/Item_EwingsClothes_OneJobTShirt.png": "35004c68ab0fdc7def7d114dcde4ca5a6cee1cafe45e104ba9acd202ac7e8f06"
+  }
+}

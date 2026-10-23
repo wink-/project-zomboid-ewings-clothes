@@ -1,7 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <fileGuidTable>
     <files>
         <path>media/clothing/clothingItems/EwingsClothes_OneJobTShirt.xml</path>
         <guid>fe63406b-8d7c-4e71-93d1-5a1938ced721</guid>
+    </files>
+    <files>
+        <path>media/clothing/clothingItems/EwingsClothes_DogTShirt.xml</path>
+        <guid>56b206e0-22ba-595a-8fba-446fd73deaf0</guid>
+    </files>
+    <files>
+        <path>media/clothing/clothingItems/EwingsClothes_CatTShirt.xml</path>
+        <guid>a84d0b0d-9375-57bc-9837-91802c77fdb5</guid>
     </files>
 </fileGuidTable>

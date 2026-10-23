@@ -1,65 +1,58 @@
-# Ewing's Clothes
+# Ewing's Clothes 1.1.0 — staged animal shirt update
 
-An independent Project Zomboid Build 42 clothing mod. Version **1.0.0** adds a solid purple T-shirt with the exact words **One Job** in bold yellow on the front chest. The back is plain purple.
+Three native clothing items for inspected Project Zomboid **42.21**, Steam build **25485521**. Stable mod ID: **`EwingsClothes`**. The release ZIPs preserve the validated build exactly. Actual gameplay and multiplayer testing remain pending.
 
-![Offline male/female front and back preview](preview/EwingsClothes-1.0.0-front-back-preview.png)
+| Item ID | Design | Availability |
+| --- | --- | --- |
+| `EwingsClothes.OneJobTShirt` | Original purple shirt, yellow **One Job** | Rare clothing loot / debug |
+| `EwingsClothes.DogTShirt` | Teal shirt, original friendly dog portrait | Rare clothing loot / dog-photo recipe / debug |
+| `EwingsClothes.CatTShirt` | Navy shirt, original orange tabby portrait | Rare clothing loot / cat-photo recipe / debug |
 
-The image is an offline Blender UV preview, not an in-game screenshot. Game loading, equip/render, animation, save/reload and multiplayer tests have **not** been run.
+The One Job item definition, XML, texture, icon, original artwork and earlier preview files are byte-for-byte preserved. Shared name/GUID registries gain only the new entries, while mod metadata advances to 1.1.0. Each design uses the existing native body-atlas structure, fixed colors and plain back. No slogans are added to animal shirts. No native photo pixels, models or game assets are bundled.
 
-| Identity | Value |
-| --- | --- |
-| Mod ID | `EwingsClothes` |
-| Item ID | `EwingsClothes.OneJobTShirt` |
-| Inventory name | One Job T-shirt |
-| Version | 1.0.0 |
-| Inspected target | Game 42.21, Steam build 25485521, Windows |
-| Bounds | 42.21 only; later builds require reinspection |
+![Dog front/back offline UV preview](preview/animals/EwingsClothes-1.1.0-dog-front-back.png)
 
-## Download and install
+![Cat front/back offline UV preview](preview/animals/EwingsClothes-1.1.0-cat-front-back.png)
 
-Download **EwingsClothes-1.0.0-install.zip** and its `.sha256` sidecar from the [v1.0.0 release](https://github.com/wink-/project-zomboid-ewings-clothes/releases/tag/v1.0.0). GitHub's automatic source archives are development source, not the install ZIP.
+## Craft the fixed animal designs
 
-1. Close the game/server and back up any world you intend to test.
-2. Extract the single `EwingsClothes` folder into the effective Project Zomboid user-data `mods` directory. Normally this is `%UserProfile%\Zomboid\mods` on Windows; custom `-cachedir` changes it.
-3. Confirm `mods/EwingsClothes/42/mod.info` with sibling `mods/EwingsClothes/common/`.
-4. Enable **Ewing's Clothes** in a disposable test world and complete the [test checklist](docs/DISPOSABLE_TEST_CHECKLIST.md).
+The one-step Tailoring recipes need an unworn plain `Base.Tshirt_DefaultTEXTURE` or `Base.Tshirt_WhiteTINT`, a matching **`Base.Photo`** subject, a native paintbrush, and one native use from each of four paint colors. **The photo and brush are retained.** The photo is a reusable drawing reference; output artwork is fixed.
 
-Do not overwrite the game installation or another Ewing's mod. No Python, Blender or additional mod dependency is needed to play. There is no Workshop item or Workshop ID.
+- Dog: `Base.PaintTurquoise`, `Base.PaintBrown`, `Base.PaintWhite`, `Base.PaintBlack`.
+- Cat: `Base.PaintBlue`, `Base.PaintOrange`, `Base.PaintWhite`, `Base.PaintBlack`.
+- Brush: `Base.Paintbrush` or `Base.PaintbrushCrafted`.
+- Dog/cat/sleeping/playing variants and the shared dog-and-cat photo are checked by native `modData.collectibleKey`, independent of translated display names.
 
-## Find and spawn the shirt
+The native `CopyClothing` path preserves the input garment's condition, dirt/blood, holes, patches, wetness, favorite and modData; conversion does not repair or launder it. Colors/amounts and 180 recipe-time units are explicit mod balance choices. Ordinary game paint is a gameplay abstraction, not a new fabric-paint system. See [exact quantities, accepted keys and mechanics](docs/ANIMAL_RECIPES.md).
 
-Search **`EwingsClothes.OneJobTShirt`** in the debug item browser and add it to inventory. A debug Lua console, if available in your setup, can use:
+## Natural loot
 
-```lua
-getPlayer():getInventory():AddItem("EwingsClothes.OneJobTShirt")
-```
+Each of the three shirts is added once to `ClothingStoresShirts` (weight 0.2), `ClothingStorageAllShirts` (0.1), and `WardrobeGeneric` (0.05). These are relative weights, not percentages. Normal loot settings and other mods affect actual frequency. The native generic wardrobe aliases inherit the same table addition. No broad lists, native entries, roll counts, zombie outfits or photo distributions are replaced. No existing container is force-refilled; normal new-container/respawn rules apply.
 
-Debug console availability is not certified. Version 1.0.0 adds no natural loot distribution or crafting recipes. Wear the shirt through the normal clothing action.
+## Download, install and rollback
 
-## Behavior and balance
+Download the [v1.1.0 install ZIP and SHA-256 sidecar](https://github.com/wink-/project-zomboid-ewings-clothes/releases/tag/v1.1.0). GitHub automatic source archives are development source, not the install ZIP. Close the game/server, back up the existing `EwingsClothes` folder outside active mod directories, then extract the install ZIP's single `EwingsClothes` folder into the effective user-data `mods` directory. Expected layout: `mods/EwingsClothes/42/mod.info` and sibling `common/`. A custom `-cachedir` changes the user-data location. Replace this mod as a complete folder rather than merging versions. Do not enable two copies with the same mod ID or overwrite vanilla files.
 
-Uses the native `base:tshirt` slot, `BloodLocation = Shirt`, cotton fabric and native T-shirt body-layer behavior for male and female characters. Random hue/tint are disabled; there is no dye tag. Blood, dirt, holes, patches or covering garments may obscure the print normally.
+For removal/rollback, first remove Dog/Cat item instances from disposable characters, containers and ground; those IDs are absent in 1.0.0. Save before disabling/replacing the mod, and restore an appropriate backup if necessary. One Job retains its old ID. This task has not accessed any saves.
 
-Insulation **0.2** and wind resistance **0.05** match vanilla `Tshirt_DefaultTEXTURE`; weight **0.3** is a mod-selected light cotton shirt value. Other protection/durability behavior uses native defaults. Cotton ripping is retained. Native `TShirt_Ground` is referenced without bundling a model; its appearance needs in-game confirmation.
+## Debug and multiplayer
 
-No global overrides, Lua hooks, new equipment slots, executable runtime code or networking system are added. The clothing GUID table has one owned entry and uses the native merge path.
+Search the exact full item IDs above in the debug browser. Where a debug Lua console is available, use `getPlayer():getInventory():AddItem("EwingsClothes.DogTShirt")` (or the Cat/OneJob full ID). Debug-created generic photos may randomize to an unrelated subject; any `Base.Photo` is not automatically a matching reference.
 
-## Validation and limitations
+Server and every client must use the **same 1.1.0 package** and `EwingsClothes` mod ID. Server loot additions are additive; recipe predicates are shared. No new dependency or Workshop ID is introduced. This is an expected native networking arrangement, **not multiplayer certification**.
 
-**29 offline checks pass:** references, stable IDs/GUID, fixed-color fields, PNG dimensions/alpha, front-chest UV placement/orientation for both bodies, ZIP integrity and exact member bytes. Preview inspection caught and corrected sleeve coverage and chest placement before the final build. The final preview shows readable front text and plain backs on both bodies.
+## Verification limits
 
-**Not run:** native game loading, actual debug browser/equip/render, animation/layering, dropped-item rendering, damage/washing, save/reload or multiplayer. Offline checks are not gameplay certification. See [inspection evidence](docs/INSPECTION.md), [validation results](docs/VALIDATION.json) and [publication preservation evidence](docs/PUBLICATION_VALIDATION.json).
+Offline previews in `preview/animals/` were generated by a CPU pixel renderer and inspected. They project only the original artwork onto installed male/female UV coordinates with a neutral gray mannequin. No game window, screen capture, desktop control, proprietary skin, exported model or Blender scene was used. The earlier One Job preview remains unchanged.
 
-The public ZIP has sanitized documentation and a new checksum. Its `42/` and `common/` runtime files, original texture/icon and stable IDs are byte-identical to the originally checked build.
+Native parser/VM and static check results are recorded in `docs/VALIDATION.json` and `docs/BEHAVIOR_CHECKS.json`. Tests using isolated tables are labeled as such. **Not run:** actual crafting inventory/UI selection, game equip/render/animation, garment damage/washing, save/reload, loot appearance in a world or multiplayer. Follow [the disposable test checklist](docs/DISPOSABLE_TEST_CHECKLIST.md) after authorization.
 
-## Multiplayer and rollback
+## Release integrity
 
-Server and every client need the identical package, with `EwingsClothes` in the server mod list. MP support is an untested expectation; test two clients and persistence in a disposable world first.
+Install ZIP SHA-256: `234cdfa597a4e756e8105fc9447a05ef6c0759c4903c914733ab0a984c516bff`. Source ZIP SHA-256: `6d695aabd0e1d1bd423dc59bfa5aeb4fa93ee305ee452269b5bda81c77ca896b`.
 
-For updates, back up the complete mod folder outside active mod directories and replace it as a unit. Before removal, remove all `EwingsClothes.OneJobTShirt` instances from characters, containers and ground, save, then disable/remove only this mod. Missing definitions can make remaining instances disappear or log errors. Restore the matching package and an appropriate backup if needed. Preserve the stable IDs.
+The attached ZIPs are the unchanged validated build snapshots, including documentation written before installation/publication. This repository README and the release notes state current publication status. The portable `EwingsClothes/` files are byte-identical to the verified install ZIP; publication does not alter the installed mod.
 
-## Source and provenance
+## Source
 
-`EwingsClothes/` is the portable mod. `art/` contains original SVG/PNG sources and color/print specifications; `preview/` contains offline renders; `tools/` contains development utilities. New clothing should receive unique item names, GUIDs, textures and icons while preserving current IDs.
-
-See [README-BUILD.md](README-BUILD.md), [CHANGELOG.md](CHANGELOG.md) and [NOTICE.md](NOTICE.md). No repository-wide open-source license has been selected. No proprietary game textures, models, scripts, binaries, saves or font files are redistributed. This project is independent of The Indie Stone.
+`EwingsClothes/` is the portable runtime mod; `art/animals/` contains new original SVG/PNG sources; `tools/` contains offline builders/checks. Historical 1.0.0 documentation/tools are explicitly archived. See [build instructions](README-BUILD.md), [changelog](CHANGELOG.md) and [license/provenance notices](NOTICE.md).

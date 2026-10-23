@@ -1,0 +1,31 @@
+{
+  "version": "1.1.0",
+  "designs": {
+    "Dog": {
+      "shirt_color": "#216A68",
+      "item_id": "EwingsClothes.DogTShirt",
+      "print_box": [
+        440,
+        340,
+        584,
+        484
+      ],
+      "base_alpha": "original mod-owned One Job silhouette, unchanged",
+      "art": "original vector/code-authored portrait; no slogan, native photo pixels or external image assets",
+      "back": "plain"
+    },
+    "Cat": {
+      "shirt_color": "#2B3857",
+      "item_id": "EwingsClothes.CatTShirt",
+      "print_box": [
+        440,
+        340,
+        584,
+        484
+      ],
+      "base_alpha": "original mod-owned One Job silhouette, unchanged",
+      "art": "original vector/code-authored portrait; no slogan, native photo pixels or external image assets",
+      "back": "plain"
+    }
+  }
+}
