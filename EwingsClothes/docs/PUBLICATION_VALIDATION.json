@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "original_install_sha256": "935645e0d6ee310be0d0ee97bc392ea6ab8379427aeec2278958ddbc94342054",
+  "original_source_sha256": "e3f4aa36a2e6e42a921ad7455079e1148425028dd3cdb44d448471eb371b69a7",
+  "publication_date": "2026-10-23",
+  "runtime_comparison": "Every 42/ and common/ file is byte-identical to the originally tested install ZIP",
+  "runtime_file_sha256": {
+    "42/media/lua/shared/Translate/EN/ItemName.json": "6009a43ac3d739b6e9546d903399be18c38c2843173008d8ed8f6eff9cb5ac84",
+    "42/media/scripts/EwingsClothes_OneJobTShirt.txt": "5c009f82883e1526eec81f459300a022812df990ffa28e8d6c76140b2ee3b111",
+    "42/mod.info": "ae08d9b632175729f98b33867d38e018c58253a84f5a8b12adada859a702087a",
+    "common/media/clothing/clothingItems/EwingsClothes_OneJobTShirt.xml": "e56754cfe5601e3499ca445a578c66267ac60fcec55c4a45b7c6c9254496b772",
+    "common/media/fileGuidTable.xml": "38fb6f14078321a064a5b5c6b4c1aa1ac041a90b7e3587e7e0eefcab516fd18d",
+    "common/media/textures/Clothes/EwingsClothes/EwingsClothes_OneJobTShirt.png": "1c0ea1df13d7f253b5cb361d309d045cff62769adef730e40cc838062e696bdc",
+    "common/media/textures/Item_EwingsClothes_OneJobTShirt.png": "35004c68ab0fdc7def7d114dcde4ca5a6cee1cafe45e104ba9acd202ac7e8f06"
+  },
+  "artwork_comparison": "All original art source files and runtime texture/icon bytes preserved",
+  "public_changes": [
+    "Removed local installation paths from documentation",
+    "Made development tool paths explicit command arguments",
+    "Added publication README/build/provenance notices"
+  ],
+  "package_note": "Public ZIP is repackaged with sanitized documentation; original tested ZIP is preserved locally. Runtime bytes and stable IDs are unchanged.",
+  "runtime_tests": "Not run; game/server not launched or mod installed"
+}

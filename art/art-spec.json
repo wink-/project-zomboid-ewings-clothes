@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "phrase": "One Job",
+  "purple": "#7026A3",
+  "yellow": "#FFDA36",
+  "atlas_size": [
+    1024,
+    1024
+  ],
+  "native_uv_reference_size": [
+    256,
+    256
+  ],
+  "print_box_pixels": [
+    424,
+    340,
+    600,
+    374
+  ],
+  "print_uv": [
+    0.4140625,
+    0.33203125,
+    0.5859375,
+    0.365234375
+  ],
+  "font": "Arial Bold (system font rendered to raster; no font file redistributed)",
+  "back": "plain purple",
+  "generation": "Original polygons and typography; no extracted game pixels"
+}

@@ -1,0 +1,236 @@
+{
+  "mod": "Ewing's Clothes",
+  "mod_id": "EwingsClothes",
+  "item_id": "EwingsClothes.OneJobTShirt",
+  "version": "1.0.0",
+  "inspected_game_version": "42.21",
+  "steam_build": "25485521",
+  "date": "2026-10-22",
+  "method": "Static standard-library contract/reference/PNG/UV/package validation; local Blender preview separately viewed",
+  "checks": [
+    {
+      "check": "installed Steam build",
+      "status": "PASS",
+      "detail": "25485521"
+    },
+    {
+      "check": "stable mod identity/version/bounds",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "balanced item syntax",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "one unique fully qualified item",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "supported native property contract",
+      "status": "PASS",
+      "detail": {
+        "ItemType": "base:clothing",
+        "BodyLocation": "base:tshirt",
+        "BloodLocation": "Shirt",
+        "ClothingItem": "EwingsClothes_OneJobTShirt",
+        "Icon": "EwingsClothes_OneJobTShirt",
+        "FabricType": "Cotton",
+        "Insulation": "0.2",
+        "WindResistance": "0.05",
+        "Weight": "0.3",
+        "WorldStaticModel": "TShirt_Ground",
+        "Tags": "base:ripclothingcotton"
+      }
+    },
+    {
+      "check": "no random recolor or dye script fields",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no native namespace/item collision",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "fixed tint/hue and native male/female body layer",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "clothing XML texture resolves exactly",
+      "status": "PASS",
+      "detail": "common/media/textures/Clothes/EwingsClothes/EwingsClothes_OneJobTShirt.png"
+    },
+    {
+      "check": "one matching native merged GUID registration",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "unique GUID",
+      "status": "PASS",
+      "detail": "fe63406b-8d7c-4e71-93d1-5a1938ced721"
+    },
+    {
+      "check": "English item-name JSON maps exact ID",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "PNG signature EwingsClothes_OneJobTShirt.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runtime atlas RGBA dimensions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "PNG signature Item_EwingsClothes_OneJobTShirt.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runtime icon RGBA dimensions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "icon transparency",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "atlas alpha has cloth and transparency",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "only front-chest print is yellow",
+      "status": "PASS",
+      "detail": {
+        "yellow_pixels": 2144,
+        "print_box": [
+          424,
+          340,
+          600,
+          374
+        ]
+      }
+    },
+    {
+      "check": "exact words and original artwork source",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runtime/source atlas byte identity",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Male print samples cover only front torso",
+      "status": "PASS",
+      "detail": {
+        "samples": 119,
+        "vertices": 617,
+        "triangles": 916
+      }
+    },
+    {
+      "check": "Male UV text orientation monotonic front",
+      "status": "PASS",
+      "detail": {
+        "left_x": -0.07081045532599692,
+        "right_x": 0.07081045532599693
+      }
+    },
+    {
+      "check": "Female print samples cover only front torso",
+      "status": "PASS",
+      "detail": {
+        "samples": 119,
+        "vertices": 660,
+        "triangles": 984
+      }
+    },
+    {
+      "check": "Female UV text orientation monotonic front",
+      "status": "PASS",
+      "detail": {
+        "left_x": -0.05495016664254203,
+        "right_x": 0.054934265916149805
+      }
+    },
+    {
+      "check": "native ground-model reference exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no executable runtime code, recipe, distribution or model files",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "preview images present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "selected installed inputs unchanged during checks",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "uv": {
+    "Male": {
+      "samples": 119,
+      "min_z": -0.028871409948773418,
+      "max_z": -0.0052233335359946065,
+      "print_island": "central front",
+      "back_print_pixels": 0
+    },
+    "Female": {
+      "samples": 119,
+      "min_z": -0.02135857176521147,
+      "max_z": 0.00017779634383590314,
+      "print_island": "central front",
+      "back_print_pixels": 0
+    }
+  },
+  "inspected_input_sha256": {
+    "projectzomboid.jar": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+    "media/scripts/generated/items/clothing.txt": "9edb818c5366978acc691bf44a539eb22680d334db07037e5db33064598a060a",
+    "media/clothing/clothingItems/Tshirt_DefaultTEXTURE.xml": "ce0d68dfd87a291b79c66c2c625109764cbc52b39935f7565f4ed0e385655e01",
+    "media/clothing/clothingItems/Tshirt_WhiteTINT.xml": "143f15fb02ec539d1996dfaffc09334c407cb49194051f47be0b6fe8d85ba3b5",
+    "media/textures/Clothes/Shirt_Tshirt_Textures/TShirt_White.png": "3da29091c69f7a907e7a2bafff45c510701ac27293ee6602ef7dd945f41b9d00",
+    "media/textures/ClothingTShirt.png": "e752fe6b8dd7793314bc963096fafe22b96116aa4d2fd7199db7896a8bc28775",
+    "media/clothing/clothingDecals/TShirt_Rock_1.xml": "4de69e5c66da8f6c959097cd32b484c637764ea4ca87af3c085d26a7f0fbdb83",
+    "media/models_X/Skinned/MaleBody.x": "a0a7cbb3f8fb55827f4039edd04f9af28299d76ae9160484069084faca2aff01",
+    "media/models_X/Skinned/FemaleBody.x": "aa78e223c06d99c7ba20ca500c304fc8540f92276430eee5074bc8a817d58039",
+    "media/scripts/generated/models_characters.txt": "bd4be41901a4ce7c9446e32ab4c9a1d38c5236ecb5e1f3a94af6696ffc82d866",
+    "media/scripts/generated/models_clothes.txt": "ba30d759e053ea92198534461e48fad43bbbf431be37d726a1f2afde689d499e",
+    "media/lua/shared/NPCs/BodyLocations.lua": "cd1a7f06ee4aaaaf2b7267ccab5b69bfc9b1e37441fda93551d6e9bc725d29fa",
+    "media/lua/shared/TimedActions/ISWearClothing.lua": "146c66743d8593581bae58e7e1d954886f73a1e6b8bc51720fd2271afbb50524",
+    "media/fileGuidTable.xml": "2dd35f787d87e5e039654970f62e4f6e58e7df8974c3c5f7e8668b48c4bb0edc",
+    "media/lua/shared/Translate/EN/ItemName.json": "9aac068151021899bfc4112abc3f3314a5a1e7c50512da6be6d582f983d23f8e"
+  },
+  "not_run": [
+    "game loading",
+    "debug item browser",
+    "actual equip and game render",
+    "animation/layering",
+    "ground render",
+    "damage/repair/washing",
+    "save/reload",
+    "multiplayer"
+  ],
+  "scope": "Only workspace-created files written; no installation/settings/saves/publication; unrelated projects unopened",
+  "skill_bundled_validator": "unavailable companion resource; explicit project validator used"
+}

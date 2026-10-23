@@ -1,0 +1,19 @@
+module EwingsClothes
+{
+    item OneJobTShirt
+    {
+        DisplayName = One Job T-shirt,
+        DisplayCategory = Clothing,
+        ItemType = base:clothing,
+        Icon = EwingsClothes_OneJobTShirt,
+        BloodLocation = Shirt,
+        BodyLocation = base:tshirt,
+        ClothingItem = EwingsClothes_OneJobTShirt,
+        FabricType = Cotton,
+        Insulation = 0.2,
+        WindResistance = 0.05,
+        Weight = 0.3,
+        WorldStaticModel = TShirt_Ground,
+        Tags = base:ripclothingcotton,
+    }
+}
